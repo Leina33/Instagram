@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        {% if title %}
+        <title>Instagram - {{title}}</title>
+        {% else %}
+        <title> Instagram </title>
+        {% endif %}
+    </head>
+    {% block content %}
+    <h1>insta page for {{date|date:"l d-F Y"}}</h1>
+    {% endblock %}
+</html>
