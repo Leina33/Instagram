@@ -1,5 +1,6 @@
 from django.db import models
-
+#importing user method for django
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Profile(models.Model):
