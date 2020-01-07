@@ -7,7 +7,7 @@ import datetime
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_photo = models.ImageField(default = 'default.jpg',upload_to = 'ProfilePicture/')
-    bio = models.TextField(max_length = 255)
+    bio = models.TextField(max_length = 25)
     date = models.DateTimeField(auto_now_add=True, null = True)
     
     def __str__(self):
@@ -17,8 +17,14 @@ class Profile(models.Model):
     
 class Image(models.Model):
     image = models.ImageField(upload_to='instagram/',null = 'False')
-    caption = models.CharField(max_length = 255)
+    caption = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.caption
+    
+    def save_image(self):
+        self.save()
+        
+class Comments(models.Model):
+    
