@@ -8,6 +8,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_photo = models.ImageField(default = 'default.jpg',upload_to = 'ProfilePicture/')
     bio = models.TextField(max_length=200)
+    date = models.DateTimeField(auto_now_add=True, null = True)
     
     def __str__(self):
         return f'{self.user.username} Profile'
