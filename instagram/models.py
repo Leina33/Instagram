@@ -17,6 +17,7 @@ class Profile(models.Model):
 class Image(models.Model):
     image = models.ImageField(upload_to='instagram/',null = 'False')
     caption = models.CharField(max_length =60)
+    pub_date = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.caption
