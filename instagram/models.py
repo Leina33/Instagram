@@ -20,11 +20,15 @@ class Image(models.Model):
     caption = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
     
-    def __str__(self):
-        return self.caption
+    # def __str__(self):
+    #     return self.caption
     
-    def save_image(self):
-        self.save()
+    # def save_image(self):
+    #     self.save()
+        @classmethod
+    def search_by_title(cls,search_term):
+        news = cls.objects.filter(title__icontains=search_term)
+        return instagram
         
 class Comments (models.Model):
     
