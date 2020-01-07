@@ -26,5 +26,13 @@ class Image(models.Model):
     def save_image(self):
         self.save()
         
-class Comments(models.Model):
+class Comments (models.Model):
+    
+    comment = models.CharField(max_length=150)
+    author = models.ForeignKey('Profile',related_name='commenter' , on_delete=models.CASCADE)
+    imagecomment = models.ForeignKey('Image', on_delete=models.CASCADE, related_name='image_comments')
+    date = models.DateTimeField(auto_now_add=True)
+    '''Method to filter database results'''
+    def __str__(self):
+        return self.author
     
