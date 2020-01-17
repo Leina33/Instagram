@@ -1,8 +1,7 @@
 # NAME : INSTAGRAM
 
 ## DESCRIPTION
-
-.Instragram is an application that enables users to post their post and can be followed by other users.Their post can be shared ,commented and liked others.
+ Instragram is an application that enables users to post their post and can be followed by other users.Their post can be shared ,commented and liked others.
 
 ## AUTHOR
 
@@ -47,7 +46,7 @@ DATABASE_URL='postgres://databaseowner:password@localhost/databasename'
 
 4.create a database using postgres
 
-CREATE DATABASE <your-database-name>
+CREATE DATABASE instagram
 
 5.create a migration using the following command
 python3 manage.py makemigrations
