@@ -11,7 +11,7 @@ Dominic Rutto
 
 Fork this repository or clone it to your local machine on ubuntu use the following commands
 
-git clone this repo h
+git clone this repo https://github.com/Leina33/Instagram.git
 
 ## USER STORY
 
