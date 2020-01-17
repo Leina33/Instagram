@@ -3,7 +3,11 @@ import os
 import sys
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "star.settings")
+=======
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "media.settings")
+>>>>>>> c97a48a1637fa4f4abc3c2e3e419f9d835da1a0b
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

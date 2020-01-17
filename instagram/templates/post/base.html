@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    {% if title %}
+        <title>The-Gram - {{ title }}</title>
+    {% else %}
+        <title>The-Gram</title>
+    {% endif %}
+
+    {% block styles %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    {% endblock %}
+
+
+    
+</head>
+<body>
+     {% include "navbar.html" %} <br> <hr>   
+
+
+     <main role="main" class="container" >
+            <div class="row">
+                <div class="col-md-8">
+
+                    {% if messages %}
+                    {% for message in messages %}
+
+                    <div class="alert alert-{{message.tags}}">
+                        {{ message }}
+                    </div>
+
+
+                    {% endfor %}
+                    {% endif %}
+
+
+                    {% block content %}{% endblock %}
+        
+                </div>
+        
+                <div class="col-md-4" >
+                    <div class="content-section" style="background-color:rgb(243, 241, 236);">
+                            <div class="navbar-nav" style="background-color: rgb(243, 241, 236);">
+                                    {% if user.is_authenticated %}
+
+                                            
+                                            
+                                   
+
+                
+                                    {% endif %}    
+                                </div>
+                        <div class="jumbotron" style="background-color: rgb(243, 241, 236);">
+                            
+
+                                
+
+                                
+
+                                Suggested: <br>
+
+
+                                {% for post in post %}<div class="overflow-auto" >
+                                        
+                        
+                                <article class="media content-section" class="d-inline-block bg-primary text-white" style="background-color:rgb(243, 241, 236);" >
+                                        <img src="{{post.account_user.profile.image.url}}" class="rounded-circle article-img" alt="">
+                                        <div class="media-body" >
+                                            <div class="article-metadata" >
+                                                
+                                                <a href="#" class="mr-2">{{ post.account_user }}</a>
+                                
+                                               
+                                                    <br>
+                                               
+                                                   
+
+                                            </div>
+                                
+                                            </div>
+                                <!-- make this a dropdown or something -->
+
+                                        </div>
+                                    </article>
+                                    {% endfor %}
+
+
+
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </main>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+   
+</body></html>
