@@ -1,18 +1,21 @@
 # NAME : INSTAGRAM
 
-## DESCRIPTION 
+## DESCRIPTION
+
 .Instragram is an application that enables users to post their post and can be followed by other users.Their post can be shared ,commented and liked others.
 
-
 ## AUTHOR
-.OWINO LAWRENCE ODHIAMBO
+
+Dominic Rutto
 
 ## CLONE
+
 Fork this repository or clone it to your local machine on ubuntu use the following commands
 
-git clone this repo https://github.com/owinolawrence/instagram.git
+git clone this repo h
 
 ## USER STORY
+
 As a user of the application you will be able to:
 
 1 View different posts from accounts followed
@@ -23,11 +26,11 @@ comment on photos
 5 Upload Posts with caption
 6 Follow other users
 
-
 ## INSTALLATION
+
 1.set up a virtual environment using the following command.
 
-python3 -m venv  virtual
+python3 -m venv virtual
 And activate virtual
 
 source virtual/bin/activate
@@ -39,7 +42,7 @@ pip install -r requirements.txt
 
 SECRET_KEY='<random-string>'
 DEBUG=True
-ALLOWED_HOSTS='*'
+ALLOWED_HOSTS='\*'
 DATABASE_URL='postgres://databaseowner:password@localhost/databasename'
 
 4.create a database using postgres
@@ -65,6 +68,7 @@ navigate to admin by adding /admin to your local host url like so :
 127.0.0.1:8000/admin
 
 ## TECHNOLOGIES USED
+
 1:Html5 and Css3
 2:Python
 3:Bootstrap 3
@@ -72,4 +76,5 @@ navigate to admin by adding /admin to your local host url like so :
 5:Jquery
 
 ## LICENSE
-This project is licensed under the [MIT] license
+
+This project is licensed under the [MIT] @Dominic Rutto license
